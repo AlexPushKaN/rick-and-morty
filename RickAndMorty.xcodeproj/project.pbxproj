@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		4D407C212CB83BE200DA042A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D407C202CB83BE200DA042A /* AppDelegate.swift */; };
 		4D407C232CB83BE200DA042A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D407C222CB83BE200DA042A /* SceneDelegate.swift */; };
-		4D407C252CB83BE200DA042A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D407C242CB83BE200DA042A /* ViewController.swift */; };
-		4D407C282CB83BE200DA042A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D407C262CB83BE200DA042A /* Main.storyboard */; };
 		4D407C2A2CB83BE400DA042A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D407C292CB83BE400DA042A /* Assets.xcassets */; };
 		4D407C2D2CB83BE400DA042A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D407C2B2CB83BE400DA042A /* LaunchScreen.storyboard */; };
+		4D407C352CB83D6300DA042A /* ListCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D407C342CB83D6300DA042A /* ListCharactersViewController.swift */; };
+		4D407C372CB83D9F00DA042A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D407C362CB83D9F00DA042A /* NetworkManager.swift */; };
+		4D407C392CB83E5500DA042A /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D407C382CB83E5500DA042A /* MainCoordinator.swift */; };
+		4D407C3E2CB8408000DA042A /* ListCharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D407C3D2CB8408000DA042A /* ListCharactersViewModel.swift */; };
+		4D407C402CB840B400DA042A /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D407C3F2CB840B400DA042A /* CharacterViewModel.swift */; };
+		4D407C442CB846FD00DA042A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D407C432CB846FD00DA042A /* Character.swift */; };
+		4D407C462CB84A9A00DA042A /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D407C452CB84A9A00DA042A /* CharacterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4D407C1D2CB83BE200DA042A /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D407C202CB83BE200DA042A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D407C222CB83BE200DA042A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4D407C242CB83BE200DA042A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4D407C272CB83BE200DA042A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D407C292CB83BE400DA042A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D407C2C2CB83BE400DA042A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D407C2E2CB83BE400DA042A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D407C342CB83D6300DA042A /* ListCharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersViewController.swift; sourceTree = "<group>"; };
+		4D407C362CB83D9F00DA042A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4D407C382CB83E5500DA042A /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		4D407C3D2CB8408000DA042A /* ListCharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersViewModel.swift; sourceTree = "<group>"; };
+		4D407C3F2CB840B400DA042A /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
+		4D407C432CB846FD00DA042A /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		4D407C452CB84A9A00DA042A /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +68,58 @@
 			children = (
 				4D407C202CB83BE200DA042A /* AppDelegate.swift */,
 				4D407C222CB83BE200DA042A /* SceneDelegate.swift */,
-				4D407C242CB83BE200DA042A /* ViewController.swift */,
-				4D407C262CB83BE200DA042A /* Main.storyboard */,
-				4D407C292CB83BE400DA042A /* Assets.xcassets */,
+				4D407C3A2CB83FAE00DA042A /* Coordinator */,
+				4D407C3C2CB83FC400DA042A /* Service */,
+				4D407C422CB846E200DA042A /* Model */,
+				4D407C3B2CB83FBB00DA042A /* View */,
+				4D407C412CB840DB00DA042A /* ViewModel */,
 				4D407C2B2CB83BE400DA042A /* LaunchScreen.storyboard */,
+				4D407C292CB83BE400DA042A /* Assets.xcassets */,
 				4D407C2E2CB83BE400DA042A /* Info.plist */,
 			);
 			path = RickAndMorty;
+			sourceTree = "<group>";
+		};
+		4D407C3A2CB83FAE00DA042A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				4D407C382CB83E5500DA042A /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		4D407C3B2CB83FBB00DA042A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4D407C342CB83D6300DA042A /* ListCharactersViewController.swift */,
+				4D407C452CB84A9A00DA042A /* CharacterViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4D407C3C2CB83FC400DA042A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4D407C362CB83D9F00DA042A /* NetworkManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4D407C412CB840DB00DA042A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4D407C3D2CB8408000DA042A /* ListCharactersViewModel.swift */,
+				4D407C3F2CB840B400DA042A /* CharacterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4D407C422CB846E200DA042A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D407C432CB846FD00DA042A /* Character.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +182,6 @@
 			files = (
 				4D407C2D2CB83BE400DA042A /* LaunchScreen.storyboard in Resources */,
 				4D407C2A2CB83BE400DA042A /* Assets.xcassets in Resources */,
-				4D407C282CB83BE200DA042A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +192,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D407C252CB83BE200DA042A /* ViewController.swift in Sources */,
+				4D407C462CB84A9A00DA042A /* CharacterViewController.swift in Sources */,
+				4D407C372CB83D9F00DA042A /* NetworkManager.swift in Sources */,
 				4D407C212CB83BE200DA042A /* AppDelegate.swift in Sources */,
+				4D407C402CB840B400DA042A /* CharacterViewModel.swift in Sources */,
+				4D407C3E2CB8408000DA042A /* ListCharactersViewModel.swift in Sources */,
+				4D407C352CB83D6300DA042A /* ListCharactersViewController.swift in Sources */,
+				4D407C392CB83E5500DA042A /* MainCoordinator.swift in Sources */,
 				4D407C232CB83BE200DA042A /* SceneDelegate.swift in Sources */,
+				4D407C442CB846FD00DA042A /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4D407C262CB83BE200DA042A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4D407C272CB83BE200DA042A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4D407C2B2CB83BE400DA042A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,9 +349,9 @@
 				INFOPLIST_FILE = RickAndMorty/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +359,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = JediClan.RickAndMorty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -325,9 +380,9 @@
 				INFOPLIST_FILE = RickAndMorty/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +390,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = JediClan.RickAndMorty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
