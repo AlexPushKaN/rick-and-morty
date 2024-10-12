@@ -14,21 +14,21 @@ protocol Coordinator {
 
 final class MainCoordinator: Coordinator {
     var navigationController: UINavigationController
+    let networkManager = NetworkManager()
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        navigationController.view.backgroundColor = .blue
     }
 
     func start() {
-        let listCharactersViewModel = ListCharactersViewModel()
+        let listCharactersViewModel = ListCharactersViewModel(service: networkManager)
         let listCharactersViewController = ListCharactersViewController(viewModel: listCharactersViewModel)
         listCharactersViewController.coordinator = self
         navigationController.pushViewController(listCharactersViewController, animated: true)
     }
 
-    func showDetail(for item: Character) {
-        let characterViewModel = CharacterViewModel(item: item)
+    func showCharacter(for item: Character) {
+        let characterViewModel = CharacterViewModel(service: networkManager, item: item)
         let characterViewController = CharacterViewController(viewModel: characterViewModel)
         navigationController.pushViewController(characterViewController, animated: true)
     }

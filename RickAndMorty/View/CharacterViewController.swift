@@ -7,14 +7,13 @@
 
 import UIKit
 
-class CharacterViewController: UIViewController {
-    
-    var viewModel: CharacterViewModel!
+final class CharacterViewController: UIViewController {
+    private let viewModel: CharacterViewModel
+    private lazy var characterView: CharacterView = CharacterView(data: viewModel.character)
     
     init(viewModel: CharacterViewModel) {
-        super.init(nibName: nil, bundle: nil)
-        
         self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -23,6 +22,29 @@ class CharacterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        characterView.translatesAutoresizingMaskIntoConstraints = false
+        navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.3412324488, green: 0.9804162383, blue: 0.02909816429, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+        view.addSubview(characterView)
+        
+        setupConstraints()
+        viewModel.getPicture = { [weak self] data in
+            DispatchQueue.main.async {
+                guard let self = self else { return }
+                self.characterView.pictureViewImage.image = UIImage(data: data)
+            }
+        }
+        viewModel.download()
+    }
+    
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            characterView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16.0),
+            characterView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16.0),
+            characterView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16.0),
+            characterView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16.0)
+        ])
     }
 }
+
